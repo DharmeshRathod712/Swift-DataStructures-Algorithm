@@ -72,3 +72,21 @@ func binarySearch3<T: Comparable>(for array: [T], element: T, range: Range<Int>)
 
 binarySearch3(for: array, element: 5, range: 0..<array.count)
 
+var ar = [0,2,1,3,6,4,9,7,8]
+
+let temp = ar.sorted(by: >)
+print(temp)
+
+ar.map { (a) -> String in
+    return String(a)
+}
+
+ar.filter { (a) -> Bool in
+    return a % 2 == 0
+}
+
+ar.reduce("") { (r, a) -> String in
+    print("r: == \(r)")
+    print("a: == \(a)")
+    return r + String(a)
+}
