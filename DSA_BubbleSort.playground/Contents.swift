@@ -13,7 +13,9 @@ func bubbleSort() {
     for _ in 0..<arr.count {
         for j in 1..<arr.count {
             if arr[j - 1] > arr[j] {
-                (arr[j - 1], arr[j]) = (arr[j], arr[j - 1])
+                let tmp = arr[j-1]
+                arr[j-1] = arr[j]
+                arr[j] = tmp
             }
         }
     }
